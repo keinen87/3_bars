@@ -1,8 +1,12 @@
 import json
-
+import os
+import sys
 
 def load_data(filepath):
-    pass
+    if not os.path.exists(filepath):
+        return None
+    with open(filepath,'r') as raw_json_file:
+        return json.load(raw_json_file)
 
 
 def get_biggest_bar(data):
@@ -18,4 +22,10 @@ def get_closest_bar(data, longitude, latitude):
 
 
 if __name__ == '__main__':
-    pass
+    if len(sys.argv) > 1:
+        filepath = sys.argv[1]
+        source_json = load_data(filepath)
+
+    else:
+        print("Error! Enter path!")
+	
