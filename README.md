@@ -1,22 +1,16 @@
-# Ближайшие бары
+# The nearest bars
 
-[FIXME. Здесь будет описание проекта]
+The script helps to find biggest, smallest and closest bar
 
-# Как запустить
-
-Скрипт требует для своей работы установленного интерпретатора Python версии 3.5
-
-Запуск на Linux:
+# Quickstart
+Launch on Linux(Python 3.5) or Windows as simple
 
 ```#!bash
 
-$ python bars.py # possibly requires call of python3 executive instead of just python
-# FIXME вывести пример ответа скрипта
-
+$ python bars.py <path_to_file>
+# For example, python bars.py '/home/user/downloads/bars.json'
 ```
 
-Запуск на Windows происходит аналогично.
+# Project Goals
 
-# Цели проекта
-
-Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
+The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
