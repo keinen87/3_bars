@@ -13,43 +13,43 @@ def load_data(filepath):
         return json.load(raw_json_file)
 
 
-def get_biggest_bar(data):
+def get_biggest_bar(json_data):
     seatscounts = []
     target_bars = []
-    for i in data['features']:
+    for i in json_data['features']:
         seatscounts.append(i['properties']['Attributes']['SeatsCount'])
-    for i in range(len(data['features'])):
-        if data['features'][i]['properties']['Attributes']['SeatsCount'] == \
+    for i in range(len(json_data['features'])):
+        if json_data['features'][i]['properties']['Attributes']['SeatsCount'] == \
            max(seatscounts):
             target_bars.append(data['features'][i]['properties']['Attributes']['Name'])
     return target_bars
 
 
-def get_smallest_bar(data):
+def get_smallest_bar(json_data):
     seatscounts = []
     target_bars = []
-    for i in data['features']:
+    for i in json_data['features']:
         seatscounts.append(i['properties']['Attributes']['SeatsCount'])
-    for i in range(len(data['features'])):
-        if data['features'][i]['properties']['Attributes']['SeatsCount'] == \
+    for i in range(len(json_data['features'])):
+        if json_data['features'][i]['properties']['Attributes']['SeatsCount'] == \
            min(seatscounts):
             target_bars.append(data['features'][i]['properties']['Attributes']['Name'])
     return target_bars
 
 
 def min_unique(dictionary):
-    minval, result = float('inf'), None
+    minval = float('inf')
     counter = Counter(dictionary.values())
     for key, val in dictionary.items():
         if (val < minval) and (counter[val] == 1):
             minval = val
-            result = key
     return key
 
 
-def get_closest_bar(data, longitude, latitude):
+def get_closest_bar(json_data, longitude, latitude):
     current = (latitude, longitude)
-    coordinates = {data['features'][i]['properties']['Attributes']['Name']: tuple(list(reversed(data['features'][i]['geometry']['coordinates']))) for i in range(len(data['features']))}
+    coordinates = {json_data['features'][i]['properties']['Attributes']['Name']: \
+                  tuple(list(reversed(json_data['features'][i]['geometry']['coordinates']))) for i in range(len(json_data['features']))}
     haversine_pool = {key: haversine(coordinates[key], current) for key in coordinates}
     return min_unique(haversine_pool)
 
