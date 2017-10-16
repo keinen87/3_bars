@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import argparse
 import json
 import sys
@@ -59,9 +58,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
     filepath = args.filepath    
     source_json = load_data(filepath)
-    print('РЎР°РјС‹Рµ Р±РѕР»СЊС€РёРµ Р±Р°СЂС‹: ', get_biggest_bars(source_json))
-    print('РЎР°РјС‹Рµ РјР°Р»РµРЅСЊРєРёРµ Р±Р°СЂС‹: ', get_smallest_bars(source_json))
-    print('РЎР°РјС‹Р№ Р±Р»РёР·РєРёР№ Р±Р°СЂ: ',
+    print('Самые большие бары: ', get_biggest_bars(source_json))
+    print('Самые маленькие бары: ', get_smallest_bars(source_json))
+    print('Самый близкий бар: ',
           get_closest_bar(source_json,
                           float(input('Enter longitude: ')),
                           float(input('Enter latitude: '))))
