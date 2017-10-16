@@ -58,9 +58,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
     filepath = args.filepath    
     source_json = load_data(filepath)
-    print('—амые большие бары: ', get_biggest_bars(source_json))
-    print('—амые маленькие бары: ', get_smallest_bars(source_json))
-    print('—амый близкий бар: ',
+    print('Самые большие бары: ', get_biggest_bars(source_json))
+    print('Самые маленькие бары: ', get_smallest_bars(source_json))
+    print('Самый близкий бар: ',
           get_closest_bar(source_json,
                           float(input('Enter longitude: ')),
                           float(input('Enter latitude: '))))
