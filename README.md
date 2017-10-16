@@ -1,4 +1,4 @@
-﻿# The nearest bars
+# The nearest bars
 
 The script helps to find biggests, smallests and closest bar(s)
 
