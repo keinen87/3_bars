@@ -4,7 +4,7 @@ The script helps to find biggests, smallests and closest bar(s)
 
 # Quickstart
 
-Before start to look for the nearest bars you may to download bars.json file from this repository to script folder
+Before start to look for the nearest bars you may put json file to script folder
 Launch on Linux(Python 3.5) or Windows as simple
 
 ```bash
