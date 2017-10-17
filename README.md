@@ -1,6 +1,6 @@
 # The nearest bars
 
-The script helps to find biggests, smallests and closest bar(s)
+The script helps to find biggest, smallest and closest bar
 
 # Quickstart
 
@@ -9,13 +9,13 @@ Launch on Linux(Python 3.5) or Windows as simple
 
 ```bash
 # For example, python bars.py bars.json
-# You will see:
- Самые большие бары:  ['Спорт бар «Красная машина»']
- Самые маленькие бары:  ['БАР. СОКИ', 'Соки', 'Фреш-бар', 'Бар в Деловом центре Яуза']
 # Then you need to input coordinates, for example:
+# You will see:
  Enter longitude: 54
  Enter latitude: 55
- Самый близкий бар:  Бар «Гости»
+ The biggest bar:  Спорт бар «Красная машина»
+ The samallest bar:  БАР. СОКИ
+ The closest bar:  Таверна
 ```
 
 # Project Goals
